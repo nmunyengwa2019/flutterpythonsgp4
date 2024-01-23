@@ -79,10 +79,10 @@ def sgp4(satelieName, fistline, secondline):
             
             position.append(r)
             
-            print(r)
+            print("${r}")
         return jsonify(position)
             
 
 # python web server
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8000)
+    app.run(host='0.0.0.0', port=5000, debug=True)
