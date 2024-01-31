@@ -73,7 +73,7 @@ def sgp4(satelieName, fistline, secondline):
         
         month, day, hour, minute, second = days2mdhms(satellite.epochyr, satellite.epochdays)
         print(year, month, day, hour, minute, second)
-        for j in range(0, 120, 0.5):
+        for j in range(0, 120, 1):
             jd, fr = jday(year, month, day, hour, minute+j, second)
             e, r, v = satellite.sgp4(jd, fr)
             
