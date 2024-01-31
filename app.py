@@ -17,7 +17,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return "Please use /sgp4/<satelieName>/<fistline>/<secondline> and its a POST request"
+    return "Please use /sgp4/<satelieName>/<fistline>/<secondline> and its a POST request\ntracking for half a minute "
 
 
 @app.route('/sgp4/<satelieName>/<fistline>/<secondline>', methods=['POST'])
