@@ -89,8 +89,10 @@ def sgp4Prediction():
     processed_results = []
     for i in range(0, len(satellite_data), 3):
         satelieName = satellite_data[i]
-        fistline = satellite_data[i+1]
-        secondline = satellite_data[i+2]
+        if i+1 < len(satellite_data):
+            fistline = satellite_data[i+1]
+        if i+2 < len(satellite_data):
+            secondline = satellite_data[i+2]
 
         processed_result = process_satellite_data(satelieName, fistline, secondline)
         processed_results.append(processed_result)
