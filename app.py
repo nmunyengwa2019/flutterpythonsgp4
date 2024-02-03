@@ -157,7 +157,7 @@ def process_satellite_data( satelieName, fistline, secondline):
             position.append(r)
             
             print("${r}")
-        return jsonify(position)
+        return position
   
 
           
