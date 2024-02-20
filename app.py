@@ -17,10 +17,10 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return "Please use /sgp4/<satelieName>/<fistline>/<secondline> and its a POST request\ntracking for half a minute "
+    return "O....FFLINE use /sgp4/<satelieName>/<fistline>/<secondline> and its a POST request\ntracking for half a minute "
 
 
-@app.route('/sgp4/<satelieName>/<fistline>/<secondline>', methods=['POST'])
+# @app.route('/sgp4/<satelieName>/<fistline>/<secondline>', methods=['POST'])
 def sgp4(satelieName, fistline, secondline):
     #.........................
     print(satelieName+" \n"+fistline+" \n"+secondline)
@@ -80,9 +80,9 @@ def sgp4(satelieName, fistline, secondline):
             position.append(r)
             
             print("${r}")
-        return jsonify(position)
+        # return jsonify(position)
 
-@app.route('/sgp4/satelliteData', methods=['POST'])
+# @app.route('/sgp4/satelliteData', methods=['POST'])
 def sgp4Prediction():
 
     satellite_data = request.get_json()
@@ -100,7 +100,7 @@ def sgp4Prediction():
 
         processed_result = process_satellite_data(satelieName, fistline, secondline)
         processed_results.append(processed_result)
-    return jsonify(processed_results)
+    # return jsonify(processed_results)
 
 
 def process_satellite_data( satelieName, fistline, secondline):
@@ -163,7 +163,9 @@ def process_satellite_data( satelieName, fistline, secondline):
             position.append(r)
             
             print("${r}")
-        return position
+       
+       
+        # return position
   
 
           
