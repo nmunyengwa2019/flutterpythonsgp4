@@ -17,10 +17,10 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return "O....FFLINE use /sgp4/<satelieName>/<fistline>/<secondline> and its a POST request\ntracking for half a minute "
+    return "O....NLINE use /sgp4/<satelieName>/<fistline>/<secondline> and its a POST request\ntracking for half a minute "
 
 
-# @app.route('/sgp4/<satelieName>/<fistline>/<secondline>', methods=['POST'])
+@app.route('/sgp4/<satelieName>/<fistline>/<secondline>', methods=['POST'])
 def sgp4(satelieName, fistline, secondline):
     #.........................
     print(satelieName+" \n"+fistline+" \n"+secondline)
